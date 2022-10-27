@@ -2,8 +2,13 @@
 # Входные и выходные данные хранятся в отдельных текстовых файлах.
 # Пример: aaaaaaabbbbbbccccccccc => 7a6b9c и 11a3b7c => aaaaaaaaaaabbbccccccc
 
+with open(r'encoding.txt', 'w') as data:
+    data.write('aaaaaaabbbbbbcccccccccddddddd')
+    data.close
+
 with open('encoding.txt', 'r') as data:
     string = data.readline()
+    data.close
 
 def encode(s):
     encoding = ''
